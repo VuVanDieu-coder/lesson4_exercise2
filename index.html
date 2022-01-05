@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính chu vi và diện tích hình tròn</title>
+</head>
+<body>
+    <p><b>TÍNH CHU VI VÀ DIỆN TÍCH HÌNH TRÒN</b></p>
+    <P>Nhập bán kính</P><br>
+    <input type="number" id="radius">
+    <p><b>Kết quả</b></p>
+    <p>Tính chu vi hình tròn</p>
+    <br>
+    <input type="number" id="circuit" value="circuit">
+    <br>
+    <p>Tính diện tích hình tròn</p>
+    <input type="number" id="area" value="area">
+    <br>
+    <br>
+    <button type="button" onclick="tinh_toan()">Tính toán</button>
+    <button type="reset" onclick="reset()">Reset</button>
+</body>
+</html>
+<script>
+    function tinh_toan(){
+        const pi = 3.14159;
+        let radius = document.getElementById("radius").value;
+        let area = document.getElementById("area").value;
+        let circuit = document.getElementById("circuit").value;
+
+        circuit = 2*pi*radius;
+        area = pi*radius*radius;
+
+        document.getElementById("circuit").value= circuit;
+        document.getElementById("area").value=area;
+        console.log;
+    }
+    function reset(){
+        radius.value="";
+        circuit.value="";
+        area.value="";
+    }
+</script>
